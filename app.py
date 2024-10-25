@@ -8,7 +8,7 @@ CORS(app)
 
 data_store2 = []
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('postgresql://ml_db1_user:hfUL4FfkgdZsRYzd6wd518YNFFoeLmO4@dpg-csdpcfdsvqrc7392vk50-a.oregon-postgres.render.com/ml_db1')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -24,7 +24,7 @@ with app.app_context():
 
 @app.route('/api/message', methods=['GET'])
 def get_message():
-    return jsonify({"message": "Backend is up!"})
+    return jsonify({"message": "Backend is up"})
 
 @app.route('/api/data', methods=['POST'])
 def post_data():
