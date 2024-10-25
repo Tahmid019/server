@@ -24,7 +24,7 @@ with app.app_context():
 
 @app.route('/api/message', methods=['GET'])
 def get_message():
-    return jsonify({"message": "Backend is up and running!"})
+    return jsonify({"message": "Backend is up!"})
 
 @app.route('/api/data', methods=['POST'])
 def post_data():
