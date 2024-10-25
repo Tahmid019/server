@@ -8,7 +8,7 @@ CORS(app)
 
 data_store2 = []
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('postgresql://ml_db1_user:hfUL4FfkgdZsRYzd6wd518YNFFoeLmO4@dpg-csdpcfdsvqrc7392vk50-a.oregon-postgres.render.com/ml_db1')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
